@@ -17,7 +17,6 @@ class UploadFileForm(FlaskForm):
     file = FileField("File", validators=[InputRequired()])
     submit = SubmitField("Upload File")
 
-@app.route('/', methods=['GET',"POST"])
 @app.route('/home', methods=['GET',"POST"])
 def home():
     form = UploadFileForm()
